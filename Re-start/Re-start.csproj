@@ -1,0 +1,381 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E1E89AB3-3FED-448D-98C6-35661F0A0C3E}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Re_start</RootNamespace>
+    <AssemblyName>Re-start</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="itextsharp">
+      <HintPath>..\..\..\..\Desktop\Технарь 2 курс\Бокарев С.Д., Головлев К.А., Третьякова Д.А\SpaceY (Программа)\SpaceYEND\MenuAnimation\bin\Debug\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp.pdfa">
+      <HintPath>..\..\..\..\Desktop\Технарь 2 курс\Бокарев С.Д., Головлев К.А., Третьякова Д.А\SpaceY (Программа)\SpaceYEND\MenuAnimation\bin\Debug\itextsharp.pdfa.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp.xtra">
+      <HintPath>..\..\..\..\Desktop\Технарь 2 курс\Бокарев С.Д., Головлев К.А., Третьякова Д.А\SpaceY (Программа)\SpaceYEND\MenuAnimation\bin\Debug\itextsharp.xtra.dll</HintPath>
+    </Reference>
+    <Reference Include="LibraryForSQLCon">
+      <HintPath>..\LibraryForSQLCon\LibraryForSQLCon\bin\Debug\LibraryForSQLCon.dll</HintPath>
+    </Reference>
+    <Reference Include="MessagingToolkit.QRCode, Version=1.0.3541.23206, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\MessagingToolkit.QRCode.dll</HintPath>
+    </Reference>
+    <Reference Include="Spire.Doc, Version=7.1.13.41046, Culture=neutral, PublicKeyToken=663f351905198cb3, processorArchitecture=MSIL">
+      <HintPath>..\packages\FreeSpire.Doc.7.1.13\lib\net46\Spire.Doc.dll</HintPath>
+    </Reference>
+    <Reference Include="Spire.License, Version=1.3.7.46, Culture=neutral, PublicKeyToken=b1144360237c8b3f, processorArchitecture=MSIL">
+      <HintPath>..\packages\FreeSpire.Doc.7.1.13\lib\net46\Spire.License.dll</HintPath>
+    </Reference>
+    <Reference Include="Spire.Pdf, Version=5.1.23.18046, Culture=neutral, PublicKeyToken=663f351905198cb3, processorArchitecture=MSIL">
+      <HintPath>..\packages\FreeSpire.Doc.7.1.13\lib\net46\Spire.Pdf.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Messaging" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Autoriz.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Autoriz.Designer.cs">
+      <DependentUpon>Autoriz.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Chek.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Chek.Designer.cs">
+      <DependentUpon>Chek.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Connect.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Connect.Designer.cs">
+      <DependentUpon>Connect.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cript.cs" />
+    <Compile Include="DataBaseProcedure.cs" />
+    <Compile Include="DataBaseTables.cs" />
+    <Compile Include="DataBase_Configuration.cs" />
+    <Compile Include="Details.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Details.Designer.cs">
+      <DependentUpon>Details.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Document.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Document.Designer.cs">
+      <DependentUpon>Document.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dogovora.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dogovora.Designer.cs">
+      <DependentUpon>Dogovora.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExcelDocument.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Klients.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Klients.Designer.cs">
+      <DependentUpon>Klients.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Lich_Dela.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Lich_Dela.Designer.cs">
+      <DependentUpon>Lich_Dela.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Log.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Log.Designer.cs">
+      <DependentUpon>Log.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainWindow.Designer.cs">
+      <DependentUpon>MainWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Messa.cs" />
+    <Compile Include="OKompanii.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OKompanii.Designer.cs">
+      <DependentUpon>OKompanii.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Params.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Params.Designer.cs">
+      <DependentUpon>Params.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PDFDocument.cs" />
+    <Compile Include="Prava.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Prava.Designer.cs">
+      <DependentUpon>Prava.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Prihod.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Prihod.Designer.cs">
+      <DependentUpon>Prihod.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Registracia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Registracia.Designer.cs">
+      <DependentUpon>Registracia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Remonti.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Remonti.Designer.cs">
+      <DependentUpon>Remonti.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Shtat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Shtat.Designer.cs">
+      <DependentUpon>Shtat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sklad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sklad.Designer.cs">
+      <DependentUpon>Sklad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StatusRem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StatusRem.Designer.cs">
+      <DependentUpon>StatusRem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Testirovaniya.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Testirovaniya.Designer.cs">
+      <DependentUpon>Testirovaniya.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WordDocument.cs" />
+    <Compile Include="Yslugi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Yslugi.Designer.cs">
+      <DependentUpon>Yslugi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ystroistva.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ystroistva.Designer.cs">
+      <DependentUpon>Ystroistva.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Autoriz.resx">
+      <DependentUpon>Autoriz.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Chek.resx">
+      <DependentUpon>Chek.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Connect.resx">
+      <DependentUpon>Connect.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Details.resx">
+      <DependentUpon>Details.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Document.resx">
+      <DependentUpon>Document.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dogovora.resx">
+      <DependentUpon>Dogovora.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Klients.resx">
+      <DependentUpon>Klients.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Lich_Dela.resx">
+      <DependentUpon>Lich_Dela.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Log.resx">
+      <DependentUpon>Log.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainWindow.resx">
+      <DependentUpon>MainWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OKompanii.resx">
+      <DependentUpon>OKompanii.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Params.resx">
+      <DependentUpon>Params.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Prava.resx">
+      <DependentUpon>Prava.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Prihod.resx">
+      <DependentUpon>Prihod.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Registracia.resx">
+      <DependentUpon>Registracia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Remonti.resx">
+      <DependentUpon>Remonti.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Shtat.resx">
+      <DependentUpon>Shtat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sklad.resx">
+      <DependentUpon>Sklad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StatusRem.resx">
+      <DependentUpon>StatusRem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Testirovaniya.resx">
+      <DependentUpon>Testirovaniya.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Yslugi.resx">
+      <DependentUpon>Yslugi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ystroistva.resx">
+      <DependentUpon>Ystroistva.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\no-image.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\sc.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Eye.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\eye-2387853_960_720.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Логотип.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\О программе.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\sm_5b29c1e32ea96.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\material-icon-2155442_960_720.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="Microsoft.Office.Core">
+      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>8</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Interop.Excel">
+      <Guid>{00020813-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>9</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Interop.Word">
+      <Guid>{00020905-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>8</VersionMajor>
+      <VersionMinor>7</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="VBIDE">
+      <Guid>{0002E157-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
