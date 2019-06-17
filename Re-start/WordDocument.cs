@@ -111,7 +111,8 @@ namespace Re_start
                     break;
                 case (false):
                     DataBaseTables data = new DataBaseTables();
-                    data.qrChek = "SELECT dbo.Details.Naim_Details + ' для ' + dbo.Type_Device.Naim_type + ' ' + dbo.Proizvod_Device.Naim_Proizvod + ' ' + dbo.Model_Device.Naim_Model, dbo.Prihod_Details.Count_Prih FROM dbo.Prihod_Details JOIN dbo.Details ON dbo.Prihod_Details.Details_ID = dbo.Details.ID_Details JOIN dbo.Model_Device ON dbo.Details.Model_ID = dbo.Model_Device.ID_Model JOIN dbo.Proizvod_Device ON dbo.Model_Device.Proizvod_ID = dbo.Proizvod_Device.ID_Proizvod JOIN dbo.Type_Device ON dbo.Proizvod_Device.Type_ID = dbo.Type_Device.ID_Type where DATEDIFF(day,Convert(Datetime,Data_Prih,104),getdate()) = 0";
+                    data.qrChek = "SELECT dbo.Details.Naim_Details + ' для ' + dbo.Type_Device.Naim_type + ' ' +" +
+                        " dbo.Proizvod_Device.Naim_Proizvod + ' ' + dbo.Model_Device.Naim_Model, dbo.Prihod_Details.Count_Prih FROM dbo.Prihod_Details JOIN dbo.Details ON dbo.Prihod_Details.Details_ID = dbo.Details.ID_Details JOIN dbo.Model_Device ON dbo.Details.Model_ID = dbo.Model_Device.ID_Model JOIN dbo.Proizvod_Device ON dbo.Model_Device.Proizvod_ID = dbo.Proizvod_Device.ID_Proizvod JOIN dbo.Type_Device ON dbo.Proizvod_Device.Type_ID = dbo.Type_Device.ID_Type where DATEDIFF(day,Convert(Datetime,Data_Prih,104),getdate()) = 0";
                     data.dtChekFill();
                     table = data.dtChek;
                     PrihOtch();
